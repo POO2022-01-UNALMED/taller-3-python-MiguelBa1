@@ -1,75 +1,75 @@
 class TV:
-    numTV = 0
+    _numTV = 0
     def __init__(self, marca, estado):
-        self.marca = marca
-        self.canal = 1
-        self.precio = 500
-        self.estado = estado
-        self.volumen = 1
-        self.control = None
-        TV.numTV += 1
+        self._marca = marca
+        self._canal = 1
+        self._precio = 500
+        self._estado = estado
+        self._volumen = 1
+        self._control = None
+        TV._numTV += 1
 
     def getMarca(self):
-        return self.marca
+        return self._marca
 
     def setMarca(self, marca):
-        self.marca = marca
+        self._marca = marca
     
 
     def getControl(self):
-        return self.control
+        return self._control
     
 
     def setControl(self, control):
-        self.control = control
+        self._control = control
     
 
     def getPrecio(self):
-        return self.precio
+        return self._precio
     
 
     def setPrecio(self, precio):
-        self.precio = precio
+        self._precio = precio
     
 
     def getVolumen(self):
-        return self.volumen
+        return self._volumen
     
 
     def setVolumen(self, volumen):
-        if (not self.estado): return
+        if (not self._estado): return
         if (volumen < 0 or volumen > 7):
             return
-        self.volumen = volumen
+        self._volumen = volumen
     
 
     def getCanal(self):
-        return self.canal
+        return self._canal
     
 
     def setCanal(self, canal):
-        if (not self.estado):return
+        if (not self._estado):return
         if (canal < 1 or canal > 120):
             return
-        self.canal = canal
+        self._canal = canal
     
     
     @classmethod
     def getNumTV(self):
-        return TV.numTV
+        return TV._numTV
 
     @classmethod
     def setNumTV(cls, numTV):
-        TV.numTV = numTV
+        TV._numTV = numTV
     
     def turnOn(self):
-        self.estado = True
+        self._estado = True
     
     def turnOff(self):
-        self.estado = False
+        self._estado = False
     
     def getEstado(self):
-        return self.estado
+        return self._estado
 
     def canalUp(self):
         canalNuevo = self.canal + 1
