@@ -8,19 +8,19 @@ class Control:
         self._tv.turnOff()
 
     def canalUp(self):
-        canalNuevo = self.tv.getCanal() + 1
+        canalNuevo = self._tv.getCanal() + 1
         self._tv.setCanal(canalNuevo)
 
     def canalDown(self):
-        canalNuevo = self.tv.getCanal() - 1
+        canalNuevo = self._tv.getCanal() - 1
         self._tv.setCanal(canalNuevo)
 
     def volumenUp(self):
-        volumenNuevo = self.tv.getVolumen() + 1
+        volumenNuevo = self._tv.getVolumen() + 1
         self._tv.setVolumen(volumenNuevo)
 
     def volumenDown(self):
-        volumenNuevo = self.tv.getVolumen() - 1
+        volumenNuevo = self._tv.getVolumen() - 1
         self._tv.setVolumen(volumenNuevo)
 
     def setCanal(self, canal):

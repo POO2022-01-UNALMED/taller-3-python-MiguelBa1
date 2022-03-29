@@ -72,17 +72,17 @@ class TV:
         return self._estado
 
     def canalUp(self):
-        canalNuevo = self.canal + 1
+        canalNuevo = self._canal + 1
         self.setCanal(canalNuevo)
     
     def canalDown(self):
-        canalNuevo = self.canal - 1
+        canalNuevo = self._canal - 1
         self.setCanal(canalNuevo)
     
     def volumenUp(self):
-        volumenNuevo = self.volumen + 1
+        volumenNuevo = self._volumen + 1
         self.setVolumen(volumenNuevo)
 
     def volumenDown(self):
-        volumenNuevo = self.volumen - 1
+        volumenNuevo = self._volumen - 1
         self.setVolumen(volumenNuevo)
